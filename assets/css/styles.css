@@ -1,0 +1,199 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+}
+
+/* Forms */
+.form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+    border-color: #80bdff;
+}
+
+/* Hint Styles */
+.hint-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.hint-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #6c757d;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.hint-btn:hover {
+    background-color: #dee2e6;
+    color: #495057;
+}
+
+#hintBox {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1050;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+#hintBox::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+#hintBox p {
+    margin-bottom: 5px;
+}
+
+#hintBox p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact List */
+.list-group-item {
+    border: 1px solid #e9ecef;
+    margin-bottom: 5px;
+    border-radius: 8px !important;
+    transition: background-color 0.2s;
+}
+
+.contact-item.selected {
+    background-color: #e3f2fd;
+    border-color: #90caf9;
+}
+
+.contact-name {
+    color: #343a40;
+    font-size: 1.05rem;
+}
+
+.contact-details {
+    font-size: 0.85rem;
+}
+
+/* Transactions */
+.tx-item {
+    padding: 15px;
+    border-left: 4px solid transparent;
+}
+
+.tx-deposit .tx-amount {
+    color: #28a745;
+}
+
+.tx-send .tx-amount {
+    color: #dc3545;
+}
+
+.tx-amount {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+        width: auto;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

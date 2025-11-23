@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wallet - Menú Principal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container fade-in">
+    <div class="row mb-4">
+      <a href="login.html" class="btn btn-info ml-auto">Cerrar Sesión</a>
+    </div>
+    <h2>Menú Principal</h2>
+    <div class="form-group">
+      <label for="balance">Saldo en cuenta:</label>
+      <h3 id="saldoDisplay">$60.000.- CLP</h3>
+    </div>
+
+    <!-- Mensaje temporal de redirección -->
+    <div class="mt-2" aria-live="polite">
+      <div id="mensajeRedirect"></div>
+    </div>
+
+    <div class="row">
+      <a href="deposit.html" class="btn btn-primary m-1 nav-btn" data-name="Depositar">Depositar</a>
+      <a href="sendmoney.html" class="btn btn-primary m-1 nav-btn" data-name="Enviar Dinero">Enviar Dinero</a>
+      <a href="transactions.html" class="btn btn-primary m-1 nav-btn" data-name="Últimos Movimientos">Últimos
+        Movimientos</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q6l5t9+5P03d0tHeaAbqIcZ05w9v3i5oigVZF65juIL3ddBCwGltO/I" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

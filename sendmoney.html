@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wallet - Enviar Dinero</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container fade-in">
+    <div class="row mb-4">
+      <a href="menu.html" class="btn btn-success" title="Volver al Menú Principal">Inicio</a>
+      <a href="login.html" class="btn btn-info ml-auto">Cerrar Sesión</a>
+    </div>
+    <h2>Enviar Dinero</h2>
+
+    <div class="alert alert-info shadow-sm">
+      <strong>Saldo Disponible:</strong> <span id="saldoDisponibleSend">Cargando...</span>
+    </div>
+
+    <form id="sendForm">
+      <div class="form-group">
+        <label for="searchContact">Buscar en la agenda de transferencias:</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchContact" placeholder="Buscar contacto"
+            aria-describedby="button-addon1" />
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+            Buscar
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="sendAmount">Monto a enviar (CLP):</label>
+        <input type="number" class="form-control" id="sendAmount" placeholder="Ingrese monto en pesos" />
+      </div>
+
+      <div class="row align-items-center">
+        <h3 class="mr-auto">Contactos</h3>
+        <!-- Button trigger modal -->
+        <button type="button" id="openContactModal" class="btn btn-primary ml-auto m-1">
+          Agregar contacto
+        </button>
+      </div>
+
+      <ul id="contactList" class="list-group mt-2">
+        <!-- Se renderizan los contactos desde app.js -->
+      </ul>
+
+      <div class="mt-2">
+        <p id="mensajeSend" aria-live="polite"></p>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-2" id="sendMoneyBtn" style="display: none">
+        Enviar dinero
+      </button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar nuevo contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="contactFormValidation"></div>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Nombre y apellido:</label>
+              <input type="text" class="form-control" id="contactName" placeholder="Ingrese el nombre completo"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="contactCBU">Número de CBU:</label>
+              <input type="text" class="form-control" id="contactCBU" placeholder="Ingrese el CBU" required />
+            </div>
+            <div class="form-group">
+              <label for="contactAlias">Alias:</label>
+              <input type="text" class="form-control" id="contactAlias" placeholder="Ingrese el alias" required />
+            </div>
+            <div class="form-group">
+              <label for="contactBank">Nombre del Banco:</label>
+              <input type="text" class="form-control" id="contactBank" placeholder="Ingrese el banco" required />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Cerrar
+          </button>
+          <button type="button" id="saveContactBtn" class="btn btn-primary">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
